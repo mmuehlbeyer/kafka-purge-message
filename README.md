@@ -98,7 +98,7 @@ partition: demo-purge-0	low_watermark: 5
 
 ### check with kcat
 
-´´´bash
+```bash
 kcat -b localhost:9092 -t demo-purge -C -f '\nValue (%S bytes): %s %T\tPartition: %p\tOffset: %o\n--'
 
 Value (20 bytes): demo-msg-del_6 28547 1707389871700	Partition: 0	Offset: 5
@@ -131,3 +131,4 @@ Value (21 bytes): demo-msg-del_19 28547 1707389871701	Partition: 0	Offset: 18
 --
 Value (21 bytes): demo-msg-del_20 28547 1707389871701	Partition: 0	Offset: 19
 % Reached end of topic demo-purge [0] at offset 20
+```
